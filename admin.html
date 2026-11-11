@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-PT" data-country="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clientes — Painel de Verificação</title>
+  <link rel="icon" href="assets/logos/gov_pt.svg">
+  <link rel="stylesheet" href="shared/style.css">
+  <style>
+    :root{ --brand:#101418; --brand-soft:#f2f3f5; }
+    .a-shell{max-width:1180px;margin:0 auto;padding:0 20px}
+    .a-top{padding:22px 0;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:14px}
+    .a-top h1{font-size:20px;margin:0;font-weight:800}
+    .a-top .sub{color:var(--ink-3);font-size:13px}
+    .a-top .grow{flex:1}
+    .a-top a{font-weight:600}
+    .filters{display:flex;gap:8px;flex-wrap:wrap;padding:18px 0}
+    .fchip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 13px;font-size:14px;cursor:pointer;font-weight:600;color:var(--ink-2)}
+    .fchip.on{background:var(--brand);color:#fff;border-color:var(--brand)}
+    table{width:100%;border-collapse:collapse;font-size:14.5px}
+    th,td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line-2)}
+    th{font-size:12.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-3)}
+    .inp{border:1px solid var(--line);border-radius:7px;padding:8px 10px;font-size:14px;font-family:var(--font);width:100%}
+    .mini{background:none;border:1px solid var(--line);border-radius:7px;padding:6px 10px;font-size:13px;cursor:pointer;margin-right:6px;color:var(--ink-2)}
+    .mini:hover{background:var(--muted)}
+    .mini.red{color:var(--err)}
+    .empty{text-align:center;color:var(--ink-3);padding:40px}
+    .toolbar{display:flex;gap:10px;flex-wrap:wrap;padding-bottom:6px}
+    .btn.sm{width:auto;padding:9px 14px;font-size:14px}
+    .toast{left:auto;right:24px;transform:translateY(20px);bottom:24px}
+    .toast.show{transform:translateY(0)}
+  </style>
+</head>
+<body>
+  <div class="a-top"><div class="a-shell" style="display:flex;align-items:center;gap:14px">
+    <div><h1>Clientes &amp; configurações</h1><div class="sub">Editar nome, e-mail, copiar link, enviar e-mail ou excluir.</div></div>
+    <div class="grow"></div>
+    <a href="index.html">← Painel</a>
+  </div></div>
+
+  <div class="a-shell">
+    <div class="filters" id="filters"></div>
+    <div class="toolbar">
+      <button class="btn btn-ghost sm" id="export">Exportar backup (.json)</button>
+      <button class="btn btn-ghost sm" id="import">Importar backup</button>
+      <input type="file" id="file" accept="application/json" hidden>
+      <button class="btn btn-ghost sm" id="clear">Limpar tudo</button>
+    </div>
+    <div id="table" style="padding:10px 0 80px"></div>
+  </div>
+
+  <script src="shared/config.js"></script>
+  <script src="shared/app.js"></script>
+  <script src="shared/admin.js"></script>
+</body>
+</html>
