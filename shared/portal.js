@@ -39,7 +39,7 @@
         '<span class="eyebrow">' + esc(p.barra[0]) + '</span>' +
         '<h1>' + esc(p.heroTitulo) + '</h1>' +
         '<p>' + esc(p.heroSub) + '</p>' +
-        '<div class="searchbox" data-lock><input readonly placeholder="' + esc(p.busca) + '"><button tabindex="-1">' + esc(p.nav[2] || 'Pesquisar') + '</button></div>' +
+        '<div class="searchbox" data-lock><input readonly placeholder="' + esc(p.busca) + '"><button tabindex="-1">' + esc(p.buscaBotao || 'Pesquisar') + '</button></div>' +
         '<button class="hero-verify" data-verify>' + lockIcon + '<span>' + esc(p.t.botao) + '</span></button>' +
       '</div>' +
     '</section>' +

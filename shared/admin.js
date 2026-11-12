@@ -85,14 +85,19 @@
     function fb() { var t = document.createElement('textarea'); t.value = txt; document.body.appendChild(t); t.select(); try { document.execCommand('copy'); } catch (e) {} t.remove(); window.PV.toast('Link copiado!'); }
   }
 
+  function fill(tpl, p) { return String(tpl).replace(/\{portal\}/g, p.portal).replace(/\{oficial\}/g, p.oficial); }
+
   function sendMail(code, nome, mail) {
     var p = PAISES[code];
     var url = baseURL(code, nome);
     var first = nome.split(' ')[0];
-    var subject = 'Verificação de processo em andamento — ' + p.portal;
-    var body = 'Olá, ' + first + '!\n\nSeu processo de cadastramento junto a ' + p.oficial +
-      ' está em andamento e precisa de uma etapa de confirmação.\n\n' +
-      'Faça a verificação facial de segurança pelo link:\n' + url + '\n\nEquipe ' + p.portal;
+    var lang = (window.PVMAIL_LANG || {})[code] || 'en';
+    var m = (window.PVMAIL || {})[lang] || (window.PVMAIL || {}).en;
+    var subject = fill(m.subject, p);
+    var body = fill(m.hi, p).replace('{first}', first) + '\n\n' +
+      fill(m.p1, p).replace(/<[^>]+>/g, '') + '\n\n' +
+      m.p2 + '\n\n' + m.cta + ': ' + url + '\n\n' +
+      fill(m.sig, p) + '\n\n' + m.foot;
     window.location.href = 'mailto:' + encodeURIComponent(mail || '') + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     window.PV.toast('Abrindo seu e-mail...');
   }

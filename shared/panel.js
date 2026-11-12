@@ -167,68 +167,28 @@
   /* --------------------------------------------------------
      E-mail profissional
      -------------------------------------------------------- */
+  function fill(tpl, p) {
+    return String(tpl).replace(/\{portal\}/g, p.portal).replace(/\{oficial\}/g, p.oficial);
+  }
+
   function emailData(p, c) {
     var url = basePortalURL(p.code, c.nome, true);
     var st = settings();
-    var from = st.from || '';
     var first = c.nome.split(' ')[0];
-    var subject, body, heropt;
-    if (p.code === 'pt') {
-      subject = 'Verificação de processo em andamento — ' + p.portal;
-      heropt = 'Verificação em andamento';
-      body = 'Olá, ' + first + '!';
-      var p1 = 'Seu processo de cadastramento junto a <strong>' + p.oficial + '</strong> está em andamento e precisa de uma etapa de confirmação.';
-      var p2 = 'Para concluir, clique no botão abaixo e faça a verificação facial de segurança. Leva menos de um minuto.';
-      var cta = 'Fazer minha verificação';
-      var sig = 'Equipe ' + p.portal;
-      var foot = 'Este e-mail foi enviado automaticamente. Não é necessário responder.';
-    } else if (p.code === 'es') {
-      subject = 'Verificación de trámite en curso — ' + p.portal;
-      heropt = 'Verificación en curso';
-      body = 'Hola, ' + first + '!';
-      var p1 = 'Su trámite de registro ante <strong>' + p.oficial + '</strong> está en curso y requiere un paso de confirmación.';
-      var p2 = 'Para finalizar, pulse el botón de abajo y realice la verificación facial de seguridad. Tarda menos de un minuto.';
-      var cta = 'Realizar mi verificación';
-      var sig = 'Equipo ' + p.portal;
-      var foot = 'Este correo se envió automáticamente. No es necesario responder.';
-    } else if (p.code === 'fr') {
-      subject = 'Vérification de démarche en cours — ' + p.portal;
-      heropt = 'Vérification en cours';
-      body = 'Bonjour ' + first + ',';
-      var p1 = 'Votre démarche d’enregistrement auprès de <strong>' + p.oficial + '</strong> est en cours et nécessite une étape de confirmation.';
-      var p2 = 'Pour finaliser, cliquez sur le bouton ci-dessous et effectuez la vérification faciale de sécurité. Cela prend moins d’une minute.';
-      var cta = 'Faire ma vérification';
-      var sig = 'L’équipe ' + p.portal;
-      var foot = 'Cet e-mail a été envoyé automatiquement. Pas besoin d’y répondre.';
-    } else if (p.code === 'de') {
-      subject = 'Laufende Verfahrensprüfung — ' + p.portal;
-      heropt = 'Prüfung läuft';
-      body = 'Hallo ' + first + ',';
-      var p1 = 'Ihr Registrierungsverfahren bei <strong>' + p.oficial + '</strong> läuft und erfordert einen Bestätigungsschritt.';
-      var p2 = 'Klicken Sie zum Abschluss auf die Schaltfläche unten und führen Sie die Sicherheits-Gesichtsprüfung durch. Sie dauert unter einer Minute.';
-      var cta = 'Meine Prüfung durchführen';
-      var sig = 'Team ' + p.portal;
-      var foot = 'Diese E-Mail wurde automatisch gesendet. Eine Antwort ist nicht nötig.';
-    } else if (p.code === 'it') {
-      subject = 'Verifica del procedimento in corso — ' + p.portal;
-      heropt = 'Verifica in corso';
-      body = 'Ciao ' + first + ',';
-      var p1 = 'Il tuo procedimento di registrazione presso <strong>' + p.oficial + '</strong> è in corso e richiede un passaggio di conferma.';
-      var p2 = 'Per completare, clicca il pulsante qui sotto ed esegui la verifica del volto per la sicurezza. Richiede meno di un minuto.';
-      var cta = 'Esegui la mia verifica';
-      var sig = 'Team ' + p.portal;
-      var foot = 'Questa e-mail è stata inviata automaticamente. Non serve rispondere.';
-    } else {
-      subject = 'Process verification in progress — ' + p.portal;
-      heropt = 'Verification in progress';
-      body = 'Hello ' + first + ',';
-      var p1 = 'Your registration process with <strong>' + p.oficial + '</strong> is in progress and needs a confirmation step.';
-      var p2 = 'To finish, click the button below and complete the facial security check. It takes less than a minute.';
-      var cta = 'Do my verification';
-      var sig = 'The ' + p.portal + ' team';
-      var foot = 'This email was sent automatically. No reply needed.';
-    }
-    return { subject: subject, heropt: heropt, body: body, p1: p1, p2: p2, cta: cta, sig: sig, foot: foot, url: url, from: from };
+    var lang = (window.PVMAIL_LANG || {})[p.code] || 'en';
+    var m = (window.PVMAIL || {})[lang] || (window.PVMAIL || {}).en;
+    return {
+      subject: fill(m.subject, p),
+      heropt: m.hero,
+      body: fill(m.hi, p).replace('{first}', first),
+      p1: fill(m.p1, p),
+      p2: m.p2,
+      cta: m.cta,
+      sig: fill(m.sig, p),
+      foot: m.foot,
+      url: url,
+      from: st.from || ''
+    };
   }
 
   function renderPreview(p, c) {

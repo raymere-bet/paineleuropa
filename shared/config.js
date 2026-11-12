@@ -1,5 +1,5 @@
 /* ============================================================
-   Configuração dos 7 portais (dados + textos nativos)
+   Configuração dos 15 portais (dados + textos nativos)
    Cada portal clona a "cara" de um site oficial, em sua língua.
    ============================================================ */
 window.PAISES = {
@@ -12,6 +12,7 @@ window.PAISES = {
     heroTitulo:'Bem-vindo ao gov.pt',
     heroSub:'O ponto de acesso único aos serviços públicos digitais em Portugal.',
     busca:'O que procura no portal?',
+    buscaBotao:'Pesquisar',
     nav:[ 'Serviços','Guias','Cidadãos','Empresas','Notícias' ],
     secoes:[
       { t:'Em destaque', s:'Serviços e informação mais procurados', cards:[
@@ -63,6 +64,7 @@ window.PAISES = {
     heroTitulo:'Bienvenido al Punto de Acceso General',
     heroSub:'El acceso único a la información y a los trámites de la Administración.',
     busca:'¿Qué desea buscar?',
+    buscaBotao:'Buscar',
     nav:[ 'Atención e información','Empleo público','Ayudas','Trámites y servicios','Actualidad' ],
     secoes:[
       { t:'Destacados', s:'Trámites y servicios más utilizados', cards:[
@@ -114,6 +116,7 @@ window.PAISES = {
     heroTitulo:"Bienvenue sur le site officiel de l'administration française",
     heroSub:'Informations et démarches administratives en ligne, simples et accessibles.',
     busca:'Que recherchez-vous ?',
+    buscaBotao:'Rechercher',
     nav:[ 'Actualités','Démarches','Aides','Annuaire','Entreprises' ],
     secoes:[
       { t:'Démarches les plus consultées', s:'Fiches pratiques par événement de vie', cards:[
@@ -165,6 +168,7 @@ window.PAISES = {
     heroTitulo:'Willkommen im Bundesportal',
     heroSub:'Der zentrale Zugang zu den digitalen Verwaltungsleistungen für Bürger und Unternehmen.',
     busca:'Wonach suchen Sie?',
+    buscaBotao:'Suchen',
     nav:[ 'Alle Lebenslagen','Alle Geschäftslagen','Behörden','Aktuelles' ],
     secoes:[
       { t:'Häufig gesucht', s:'Beliebte Verwaltungsleistungen', cards:[
@@ -216,6 +220,7 @@ window.PAISES = {
     heroTitulo:'Benvenuto sul sito del Governo Italiano',
     heroSub:'Il portale ufficiale della Presidenza del Consiglio dei Ministri.',
     busca:'Cosa stai cercando?',
+    buscaBotao:'Cerca',
     nav:[ 'Il Presidente','Il Governo','Presidenza','Notizie','Approfondimenti' ],
     secoes:[
       { t:'In evidenza', s:'Notizie e comunicati', cards:[
@@ -241,7 +246,7 @@ window.PAISES = {
       lead:'Inserisci il tuo nome completo, così come indicato nel procedimento, per verificarne lo stato.',
       nomeLabel:'Nome e cognome', nomeLocal:'Es.: Giulia Rossi', continuar:'Continua',
       carregando:['Connessione sicura in corso...','Consultazione del database...','Ricerca del procedimento...','Validazione dei dati...','Quasi terminato...'],
-      selfieTitolo:'Verifica di sicurezza',
+      selfieTitulo:'Verifica di sicurezza',
       selfieLead:'Per garantire la sicurezza, dobbiamo confermare la tua identità.',
       ativarCam:'Attiva fotocamera', tirar:'Scatta selfie', repetir:'Ripeti',
       checkDir:['Foto del volto — lato destro','Ruota leggermente il volto a destra'],
@@ -267,6 +272,7 @@ window.PAISES = {
     heroTitulo:'Welcome to gov.ie',
     heroSub:'The official portal for Irish Government services and information.',
     busca:'Search gov.ie',
+    buscaBotao:'Search',
     nav:[ 'News','Departments','Services','Search' ],
     secoes:[
       { t:'Featured', s:'Most requested services', cards:[
@@ -318,6 +324,7 @@ window.PAISES = {
     heroTitulo:'Welcome to belgium.be',
     heroSub:'The official portal of the Belgian federal authorities.',
     busca:'What are you looking for?',
+    buscaBotao:'Search',
     nav:[ 'News','Departments','Services','About Belgium' ],
     secoes:[
       { t:'Featured', s:'Popular services', cards:[
@@ -357,6 +364,422 @@ window.PAISES = {
       semCam:'Camera not available — using simulation.',
       bloqueado:'Coming soon — button is locked',
       oficial:'Official website'
+    }
+  },
+
+  at: {
+    code:'at', bandeira:'\u{1F1E6}\u{1F1F9}', nome:'Áustria',
+    site:'https://www.oesterreich.gv.at/', oficial:'Republik Österreich · oesterreich.gv.at',
+    logo:'assets/logos/gov_at.svg', cor:'#c8102e',
+    barra:[ 'Republik Österreich', 'oesterreich.gv.at', 'Barrierefreiheit' ],
+    portal:'oesterreich.gv.at', portalSub:'Digitales Amt',
+    heroTitulo:'Willkommen auf oesterreich.gv.at',
+    heroSub:'Das offizielle Portal für Amtswege, Services und Informationen der Republik Österreich.',
+    busca:'Wonach suchen Sie?',
+    buscaBotao:'Suchen',
+    nav:[ 'Amtswege','Leben in Österreich','Bildung','Aktuelles','Service' ],
+    secoes:[
+      { t:'Häufig genutzt', s:'Beliebte Amtswege und Services', cards:[
+        { tag:'Amtsweg', t:'Meldeanschrift ändern', p:'Ummeldung des Hauptwohnsitzes online erledigen.' },
+        { tag:'Amtsweg', t:'Personalausweis', p:'Personalausweis beantragen und verlängern.' },
+        { tag:'Service', t:'Förderungen', p:'Überblick über Förderungen und Beihilfen.' },
+        { tag:'Service', t:'Digitales Amt', p:'Digitale Services mit ID Austria nutzen.' }
+      ]},
+      { t:'Themen entdecken', s:'Wählen Sie ein Thema', lista:[
+        'Wohnen','Familie und Kinder','Arbeit','Gesundheit',
+        'Steuern','Bildung','Umwelt und Klima','Mobilität'
+      ]}
+    ],
+    rodape:[
+      { h:'Amtswege', l:['Alle Amtswege','Lebenslagen','Formulare','Termine'] },
+      { h:'Informationen', l:['Über oesterreich.gv.at','Aktuelles','Bürgerservice','Hilfe'] },
+      { h:'Service', l:['Häufige Fragen','Kontakt','Barrierefreiheit','Newsletter'] },
+      { h:'Rechtliches', l:['Impressum','Datenschutz','Cookies','Haftung'] }
+    ],
+    t:{
+      botao:'Laufendes Verfahren prüfen',
+      titulo:'Verfahrensprüfung',
+      lead:'Geben Sie Ihren vollständigen Namen ein, wie er im Verfahren angeführt ist, um den Status zu prüfen.',
+      nomeLabel:'Vollständiger Name', nomeLocal:'z. B. Anna Gruber', continuar:'Weiter',
+      carregando:['Sichere Verbindung wird hergestellt...','Datenbank wird abgefragt...','Ihr Verfahren wird gesucht...','Daten werden geprüft...','Fast fertig...'],
+      selfieTitulo:'Sicherheitsüberprüfung',
+      selfieLead:'Zur Sicherheit müssen wir Ihre Identität bestätigen.',
+      ativarCam:'Kamera aktivieren', tirar:'Selfie aufnehmen', repetir:'Wiederholen',
+      checkDir:['Gesichtsfoto — rechte Seite','Drehen Sie das Gesicht leicht nach rechts'],
+      checkEsq:['Gesichtsfoto — linke Seite','Drehen Sie das Gesicht leicht nach links'],
+      checkQual:['Bildqualität','Gute Beleuchtung und gut sichtbares Gesicht'],
+      enviar:'Verfahren senden',
+      sucessoTitulo:'Verfahren bestätigt',
+      sucessoTexto:'Ihr Registrierungsverfahren ist bestätigt und läuft. Sie erhalten Updates per E-Mail.',
+      ref:'Verfahrensreferenz', fechar:'Schließen',
+      registrado:'Name im System erkannt', naoRegistrado:'Name wird geprüft...',
+      semCam:'Kamera nicht verfügbar — Simulation aktiv.',
+      bloqueado:'Bald verfügbar — Schaltfläche gesperrt',
+      oficial:'Offizielle Website'
+    }
+  },
+
+  ch: {
+    code:'ch', bandeira:'\u{1F1E8}\u{1F1ED}', nome:'Suíça',
+    site:'https://www.ch.ch/', oficial:'Schweizerische Eidgenossenschaft · ch.ch',
+    logo:'assets/logos/gov_ch.svg', cor:'#d8232a',
+    barra:[ 'Schweizerische Eidgenossenschaft', 'ch.ch', 'Service' ],
+    portal:'ch.ch', portalSub:'Portal der Schweizer Behörden',
+    heroTitulo:'Willkommen bei ch.ch',
+    heroSub:'Das Portal zu Dienstleistungen von Bund, Kantonen und Gemeinden.',
+    busca:'Wonach suchen Sie?',
+    buscaBotao:'Suchen',
+    nav:[ 'Dienstleistungen','Lebenslagen','Kantone','Aktuell' ],
+    secoes:[
+      { t:'Beliebt', s:'Häufig gesuchte Dienstleistungen', cards:[
+        { tag:'Dienstleistung', t:'Identitätskarte', p:'Antrag und Erneuerung der Identitätskarte.' },
+        { tag:'Dienstleistung', t:'Umzug melden', p:'Wohnsitzwechsel bei der Gemeinde melden.' },
+        { tag:'Dienstleistung', t:'Steuererklärung', p:'Unterlagen und Fristen zur Steuererklärung.' },
+        { tag:'Dienstleistung', t:'Familienzulagen', p:'Zulagen beantragen und verwalten.' }
+      ]},
+      { t:'Themen entdecken', s:'Wählen Sie ein Thema', lista:[
+        'Familie','Arbeit','Wohnen','Gesundheit',
+        'Steuern','Bildung','Mobilität','Umwelt'
+      ]}
+    ],
+    rodape:[
+      { h:'Dienstleistungen', l:['Alle Dienstleistungen','Lebenslagen','Formulare','Kantone'] },
+      { h:'Informationen', l:['Über ch.ch','Aktuell','Behördenverzeichnis','Hilfe'] },
+      { h:'Service', l:['Häufige Fragen','Kontakt','Barrierefreiheit','Sprachen'] },
+      { h:'Rechtliches', l:['Impressum','Datenschutz','Cookies','Rechtliche Hinweise'] }
+    ],
+    t:{
+      botao:'Laufendes Verfahren prüfen',
+      titulo:'Verfahrensprüfung',
+      lead:'Geben Sie Ihren vollständigen Namen ein, wie er im Verfahren angegeben ist, um den Status zu prüfen.',
+      nomeLabel:'Vollständiger Name', nomeLocal:'z. B. Luca Meier', continuar:'Weiter',
+      carregando:['Sichere Verbindung wird hergestellt...','Datenbank wird abgefragt...','Ihr Verfahren wird gesucht...','Daten werden geprüft...','Fast fertig...'],
+      selfieTitulo:'Sicherheitsüberprüfung',
+      selfieLead:'Zur Sicherheit müssen wir Ihre Identität bestätigen.',
+      ativarCam:'Kamera aktivieren', tirar:'Selfie aufnehmen', repetir:'Wiederholen',
+      checkDir:['Gesichtsfoto — rechte Seite','Drehen Sie das Gesicht leicht nach rechts'],
+      checkEsq:['Gesichtsfoto — linke Seite','Drehen Sie das Gesicht leicht nach links'],
+      checkQual:['Bildqualität','Gute Beleuchtung und gut sichtbares Gesicht'],
+      enviar:'Verfahren senden',
+      sucessoTitulo:'Verfahren bestätigt',
+      sucessoTexto:'Ihr Registrierungsverfahren ist bestätigt und läuft. Sie erhalten Updates per E-Mail.',
+      ref:'Verfahrensreferenz', fechar:'Schließen',
+      registrado:'Name im System erkannt', naoRegistrado:'Name wird geprüft...',
+      semCam:'Kamera nicht verfügbar — Simulation aktiv.',
+      bloqueado:'Bald verfügbar — Schaltfläche gesperrt',
+      oficial:'Offizielle Website'
+    }
+  },
+
+  nl: {
+    code:'nl', bandeira:'\u{1F1F3}\u{1F1F1}', nome:'Países Baixos',
+    site:'https://www.rijksoverheid.nl/', oficial:'Rijksoverheid · rijksoverheid.nl',
+    logo:'assets/logos/gov_nl.svg', cor:'#154273',
+    barra:[ 'Rijksoverheid', 'Onderwerpen', 'Contact' ],
+    portal:'Rijksoverheid.nl', portalSub:'Informatie van de Rijksoverheid',
+    heroTitulo:'Welkom op Rijksoverheid.nl',
+    heroSub:'Informatie over wetten, regelingen en diensten van de centrale overheid.',
+    busca:'Waar zoekt u naar?',
+    buscaBotao:'Zoeken',
+    nav:[ 'Onderwerpen','Actueel','Ministeries','Regelingen' ],
+    secoes:[
+      { t:'Veel gezocht', s:'Populaire onderwerpen', cards:[
+        { tag:'Regeling', t:'Paspoort aanvragen', p:'Aanvraag en verlenging van een paspoort.' },
+        { tag:'Regeling', t:'Verhuizing doorgeven', p:'Adreswijziging doorgeven aan de gemeente.' },
+        { tag:'Regeling', t:'Toeslagen', p:'Huurtoeslag, zorgtoeslag en kinderopvangtoeslag.' },
+        { tag:'Regeling', t:'DigiD', p:'Inloggen bij overheidsdiensten met DigiD.' }
+      ]},
+      { t:'Onderwerpen', s:'Kies een onderwerp', lista:[
+        'Wonen','Werk','Gezondheid','Onderwijs',
+        'Belastingen','Gezin','Mobiliteit','Duurzaamheid'
+      ]}
+    ],
+    rodape:[
+      { h:'Regelingen', l:['Alle onderwerpen','Uitkeringen','Formulieren','Gemeenten'] },
+      { h:'Informatie', l:['Over de Rijksoverheid','Actueel','Ministeries','Help'] },
+      { h:'Contact', l:['Veelgestelde vragen','Contactformulier','Toegankelijkheid','Nieuwsbrief'] },
+      { h:'Juridisch', l:['Colofon','Privacy','Cookies','Disclaimer'] }
+    ],
+    t:{
+      botao:'Lopende aanvraag controleren',
+      titulo:'Aanvraag controleren',
+      lead:'Vul uw volledige naam in, zoals vermeld in de aanvraag, om de status te controleren.',
+      nomeLabel:'Volledige naam', nomeLocal:'bijv. Sanne de Vries', continuar:'Doorgaan',
+      carregando:['Beveiligde verbinding wordt opgezet...','Database wordt geraadpleegd...','Uw aanvraag wordt gezocht...','Gegevens worden gevalideerd...','Bijna klaar...'],
+      selfieTitulo:'Veiligheidscontrole',
+      selfieLead:'Voor de veiligheid moeten we uw identiteit bevestigen.',
+      ativarCam:'Camera inschakelen', tirar:'Selfie maken', repetir:'Opnieuw',
+      checkDir:['Gezichtsfoto — rechterzijde','Draai uw gezicht iets naar rechts'],
+      checkEsq:['Gezichtsfoto — linkerzijde','Draai uw gezicht iets naar links'],
+      checkQual:['Beeldkwaliteit','Goede belichting en gezicht volledig zichtbaar'],
+      enviar:'Aanvraag versturen',
+      sucessoTitulo:'Aanvraag bevestigd',
+      sucessoTexto:'Uw registratieaanvraag is bevestigd en in behandeling. U ontvangt updates per e-mail.',
+      ref:'Referentie aanvraag', fechar:'Sluiten',
+      registrado:'Naam herkend in het systeem', naoRegistrado:'Naam wordt gecontroleerd...',
+      semCam:'Camera niet beschikbaar — simulatie actief.',
+      bloqueado:'Binnenkort beschikbaar — knop vergrendeld',
+      oficial:'Officiële website'
+    }
+  },
+
+  lu: {
+    code:'lu', bandeira:'\u{1F1F1}\u{1F1FA}', nome:'Luxemburgo',
+    site:'https://guichet.public.lu/', oficial:'Grand-Duché de Luxembourg · guichet.public.lu',
+    logo:'assets/logos/gov_lu.svg', cor:'#00a1de',
+    barra:[ 'Grand-Duché de Luxembourg', 'Guichet.lu', 'Contact' ],
+    portal:'Guichet.lu', portalSub:'Portail des administrations',
+    heroTitulo:'Bienvenue sur Guichet.lu',
+    heroSub:'Le portail officiel des démarches administratives du Grand-Duché.',
+    busca:'Que recherchez-vous ?',
+    buscaBotao:'Rechercher',
+    nav:[ 'Démarches','Vie quotidienne','Administrations','Actualités' ],
+    secoes:[
+      { t:'Démarches fréquentes', s:'Les démarches les plus consultées', cards:[
+        { tag:'Démarche', t:'Carte d’identité', p:'Demande et renouvellement de la carte d’identité.' },
+        { tag:'Démarche', t:'Changement d’adresse', p:'Déclarer un déménagement auprès de la commune.' },
+        { tag:'Démarche', t:'Déclaration d’impôts', p:'Formulaires et échéances fiscales.' },
+        { tag:'Démarche', t:'Allocations familiales', p:'Demander et gérer les allocations familiales.' }
+      ]},
+      { t:'Explorer par thème', s:'Choisissez un thème', lista:[
+        'Famille','Travail','Logement','Santé',
+        'Impôts','Éducation','Mobilité','Environnement'
+      ]}
+    ],
+    rodape:[
+      { h:'Démarches', l:['Toutes les démarches','Vie quotidienne','Formulaires','Communes'] },
+      { h:'Informations', l:['À propos de Guichet.lu','Actualités','Annuaire','Aide'] },
+      { h:'Service', l:['Questions fréquentes','Contact','Accessibilité','Newsletter'] },
+      { h:'Légal', l:['Mentions légales','Données personnelles','Cookies','Avis'] }
+    ],
+    t:{
+      botao:'Vérifier la démarche en cours',
+      titulo:'Vérification de la démarche',
+      lead:'Saisissez votre nom complet, tel qu’indiqué dans la démarche, pour vérifier son état.',
+      nomeLabel:'Nom complet', nomeLocal:'Ex. : Marie Schmit', continuar:'Continuer',
+      carregando:['Connexion sécurisée en cours...','Consultation de la base de données...','Localisation de votre démarche...','Validation des données...','Finalisation...'],
+      selfieTitulo:'Vérification de sécurité',
+      selfieLead:'Pour garantir la sécurité, nous devons confirmer votre identité.',
+      ativarCam:'Activer la caméra', tirar:'Prendre un selfie', repetir:'Reprendre',
+      checkDir:['Photo du visage — côté droit','Tournez légèrement le visage vers la droite'],
+      checkEsq:['Photo du visage — côté gauche','Tournez légèrement le visage vers la gauche'],
+      checkQual:['Qualité de l’image','Bonne lumière et visage bien visible'],
+      enviar:'Envoyer la démarche',
+      sucessoTitulo:'Démarche confirmée',
+      sucessoTexto:'Votre démarche d’enregistrement est confirmée et en cours. Vous recevrez des mises à jour par e-mail.',
+      ref:'Référence de la démarche', fechar:'Fermer',
+      registrado:'Nom reconnu dans le système', naoRegistrado:'Vérification du nom...',
+      semCam:'Caméra indisponible — simulation utilisée.',
+      bloqueado:'Bientôt disponible — bouton verrouillé',
+      oficial:'Site officiel'
+    }
+  },
+
+  cz: {
+    code:'cz', bandeira:'\u{1F1E8}\u{1F1FF}', nome:'Chéquia',
+    site:'https://www.gov.cz/', oficial:'Česká republika · gov.cz',
+    logo:'assets/logos/gov_cz.svg', cor:'#11457e',
+    barra:[ 'Česká republika', 'Portál veřejné správy', 'Přístupnost' ],
+    portal:'gov.cz', portalSub:'Portál veřejné správy',
+    heroTitulo:'Vítejte na Portálu veřejné správy',
+    heroSub:'Ústřední přístup k digitálním službám státu pro občany a firmy.',
+    busca:'Co hledáte?',
+    buscaBotao:'Hledat',
+    nav:[ 'Služby','Životní situace','Úřady','Aktuality' ],
+    secoes:[
+      { t:'Nejčastější', s:'Nejžádanější služby a agendy', cards:[
+        { tag:'Služba', t:'Občanský průkaz', p:'Žádost o vydání a prodloužení občanského průkazu.' },
+        { tag:'Služba', t:'Změna adresy', p:'Hlášení změny trvalého pobytu online.' },
+        { tag:'Služba', t:'Daňové přiznání', p:'Formuláře a termíny k daňovému přiznání.' },
+        { tag:'Služba', t:'Portál občana', p:'Přihlášení k digitálním službám státu.' }
+      ]},
+      { t:'Procházet podle tématu', s:'Vyberte téma', lista:[
+        'Bydlení','Rodina','Práce','Zdraví',
+        'Daně','Vzdělávání','Doprava','Životní prostředí'
+      ]}
+    ],
+    rodape:[
+      { h:'Služby', l:['Všechny služby','Životní situace','Formuláře','Úřady'] },
+      { h:'Informace', l:['O portálu','Aktuality','Registr úřadů','Nápověda'] },
+      { h:'Servis', l:['Časté dotazy','Kontakt','Přístupnost','Newsletter'] },
+      { h:'Právní', l:['Tiráž','Ochrana údajů','Cookies','Prohlášení'] }
+    ],
+    t:{
+      botao:'Ověřit probíhající řízení',
+      titulo:'Ověření řízení',
+      lead:'Zadejte své celé jméno tak, jak je uvedeno v řízení, pro ověření stavu.',
+      nomeLabel:'Celé jméno', nomeLocal:'např. Jana Nováková', continuar:'Pokračovat',
+      carregando:['Navazuji zabezpečené spojení...','Dotazuji databázi...','Vyhledávám vaše řízení...','Ověřuji údaje...','Téměř hotovo...'],
+      selfieTitulo:'Bezpečnostní ověření',
+      selfieLead:'Pro bezpečnost musíme potvrdit vaši totožnost.',
+      ativarCam:'Zapnout kameru', tirar:'Vyfotit selfie', repetir:'Opakovat',
+      checkDir:['Fotografie obličeje — pravá strana','Otočte obličej mírně doprava'],
+      checkEsq:['Fotografie obličeje — levá strana','Otočte obličej mírně doleva'],
+      checkQual:['Kvalita obrazu','Dobré osvětlení a plně viditelný obličej'],
+      enviar:'Odeslat řízení',
+      sucessoTitulo:'Řízení potvrzeno',
+      sucessoTexto:'Vaše registrační řízení je potvrzeno a probíhá. Aktualizace obdržíte e-mailem.',
+      ref:'Reference řízení', fechar:'Zavřít',
+      registrado:'Jméno rozpoznáno v systému', naoRegistrado:'Ověřuji jméno...',
+      semCam:'Kamera není dostupná — používá se simulace.',
+      bloqueado:'Již brzy — tlačítko je uzamčeno',
+      oficial:'Oficiální stránky'
+    }
+  },
+
+  pl: {
+    code:'pl', bandeira:'\u{1F1F5}\u{1F1F1}', nome:'Polônia',
+    site:'https://www.gov.pl/', oficial:'Rzeczpospolita Polska · gov.pl',
+    logo:'assets/logos/gov_pl.svg', cor:'#d22630',
+    barra:[ 'Rzeczpospolita Polska', 'gov.pl', 'Dostępność' ],
+    portal:'gov.pl', portalSub:'Portal Gov.pl',
+    heroTitulo:'Witamy w Portalu Gov.pl',
+    heroSub:'Oficjalny portal usług i informacji administracji publicznej.',
+    busca:'Czego szukasz?',
+    buscaBotao:'Szukaj',
+    nav:[ 'Usługi','Sprawy obywatelskie','Urzędy','Aktualności' ],
+    secoes:[
+      { t:'Najczęściej wybierane', s:'Popularne usługi i sprawy', cards:[
+        { tag:'Usługa', t:'Dowód osobisty', p:'Wniosek o wydanie i przedłużenie dowodu osobistego.' },
+        { tag:'Usługa', t:'Zameldowanie', p:'Zgłoszenie zmiany adresu zameldowania.' },
+        { tag:'Usługa', t:'Profil Zaufany', p:'Potwierdzanie tożsamości online w e-administracji.' },
+        { tag:'Usługa', t:'Zeznanie podatkowe', p:'Formularze i terminy rozliczeń podatkowych.' }
+      ]},
+      { t:'Przeglądaj według tematu', s:'Wybierz temat', lista:[
+        'Mieszkanie','Rodzina','Praca','Zdrowie',
+        'Podatki','Edukacja','Transport','Środowisko'
+      ]}
+    ],
+    rodape:[
+      { h:'Usługi', l:['Wszystkie usługi','Sprawy obywatelskie','Formularze','Urzędy'] },
+      { h:'Informacje', l:['O portalu','Aktualności','Wykaz urzędów','Pomoc'] },
+      { h:'Serwis', l:['Najczęstsze pytania','Kontakt','Dostępność','Newsletter'] },
+      { h:'Prawo', l:['Stopka redakcyjna','Ochrona danych','Cookies','Oświadczenie'] }
+    ],
+    t:{
+      botao:'Sprawdź trwającą sprawę',
+      titulo:'Weryfikacja sprawy',
+      lead:'Wpisz swoje pełne imię i nazwisko, tak jak w sprawie, aby sprawdzić jej status.',
+      nomeLabel:'Imię i nazwisko', nomeLocal:'np. Anna Kowalska', continuar:'Kontynuuj',
+      carregando:['Nawiązuję bezpieczne połączenie...','Odpytywanie bazy danych...','Lokalizowanie sprawy...','Walidacja danych...','Prawie gotowe...'],
+      selfieTitulo:'Weryfikacja bezpieczeństwa',
+      selfieLead:'Aby zapewnić bezpieczeństwo, musimy potwierdzić Twoją tożsamość.',
+      ativarCam:'Włącz kamerę', tirar:'Zrób selfie', repetir:'Powtórz',
+      checkDir:['Zdjęcie twarzy — prawa strona','Obróć twarz lekko w prawo'],
+      checkEsq:['Zdjęcie twarzy — lewa strona','Obróć twarz lekko w lewo'],
+      checkQual:['Jakość obrazu','Dobre oświetlenie i widoczna cała twarz'],
+      enviar:'Wyślij sprawę',
+      sucessoTitulo:'Sprawa potwierdzona',
+      sucessoTexto:'Twoja sprawa rejestracyjna została potwierdzona i jest w toku. Otrzymasz aktualizacje e-mailem.',
+      ref:'Numer referencyjny sprawy', fechar:'Zamknij',
+      registrado:'Imię rozpoznane w systemie', naoRegistrado:'Sprawdzanie imienia...',
+      semCam:'Kamera niedostępna — używana jest symulacja.',
+      bloqueado:'Wkrótce dostępne — przycisk zablokowany',
+      oficial:'Oficjalna strona'
+    }
+  },
+
+  si: {
+    code:'si', bandeira:'\u{1F1F8}\u{1F1EE}', nome:'Eslovênia',
+    site:'https://www.gov.si/', oficial:'Republika Slovenija · gov.si',
+    logo:'assets/logos/gov_si.svg', cor:'#0b4ea2',
+    barra:[ 'Republika Slovenija', 'gov.si', 'Dostopnost' ],
+    portal:'gov.si', portalSub:'Državni portal',
+    heroTitulo:'Dobrodošli na državnem portalu',
+    heroSub:'Osrednji dostop do digitalnih storitev in informacij države.',
+    busca:'Kaj iščete?',
+    buscaBotao:'Iskanje',
+    nav:[ 'Storitve','Življenjske situacije','Uradi','Novice' ],
+    secoes:[
+      { t:'Najpogosteje uporabljeno', s:'Priljubljene storitve in postopki', cards:[
+        { tag:'Storitev', t:'Osebna izkaznica', p:'Vloga za izdajo in podaljšanje osebne izkaznice.' },
+        { tag:'Storitev', t:'Prijava naslova', p:'Prijava spremembe stalnega prebivališča.' },
+        { tag:'Storitev', t:'Davčna napoved', p:'Obrazci in roki za davčno napoved.' },
+        { tag:'Storitev', t:'Portal e-uprava', p:'Prijava v digitalne storitve države.' }
+      ]},
+      { t:'Brskaj po temah', s:'Izberite temo', lista:[
+        'Bivanje','Družina','Delo','Zdravje',
+        'Davki','Izobraževanje','Promet','Okolje'
+      ]}
+    ],
+    rodape:[
+      { h:'Storitve', l:['Vse storitve','Življenjske situacije','Obrazci','Uradi'] },
+      { h:'Informacije', l:['O portalu','Novice','Register uradov','Pomoč'] },
+      { h:'Servis', l:['Pogosta vprašanja','Kontakt','Dostopnost','Novičnik'] },
+      { h:'Pravno', l:['Kolofon','Varstvo podatkov','Piškotki','Izjava'] }
+    ],
+    t:{
+      botao:'Preveri postopek v teku',
+      titulo:'Preverjanje postopka',
+      lead:'Vnesite svoje polno ime, kot je navedeno v postopku, da preverite stanje.',
+      nomeLabel:'Polno ime', nomeLocal:'npr. Ana Novak', continuar:'Nadaljuj',
+      carregando:['Vzpostavljam varno povezavo...','Povprašujem podatkovno bazo...','Iščem vaš postopek...','Preverjam podatke...','Skoraj končano...'],
+      selfieTitulo:'Varnostno preverjanje',
+      selfieLead:'Za varnost moramo potrditi vašo identiteto.',
+      ativarCam:'Vklopi kamero', tirar:'Posnemi selfie', repetir:'Ponovi',
+      checkDir:['Fotografija obraza — desna stran','Obrnite obraz rahlo v desno'],
+      checkEsq:['Fotografija obraza — leva stran','Obrnite obraz rahlo v levo'],
+      checkQual:['Kakovost slike','Dobra osvetlitev in popolnoma viden obraz'],
+      enviar:'Pošlji postopek',
+      sucessoTitulo:'Postopek potrjen',
+      sucessoTexto:'Vaš registracijski postopek je potrjen in v teku. Posodobitve prejmete po e-pošti.',
+      ref:'Referenca postopka', fechar:'Zapri',
+      registrado:'Ime prepoznano v sistemu', naoRegistrado:'Preverjanje imena...',
+      semCam:'Kamera ni na voljo — uporabljena je simulacija.',
+      bloqueado:'Kmalu na voljo — gumb je zaklenjen',
+      oficial:'Uradna stran'
+    }
+  },
+
+  hr: {
+    code:'hr', bandeira:'\u{1F1ED}\u{1F1F7}', nome:'Croácia',
+    site:'https://gov.hr/', oficial:'Republika Hrvatska · gov.hr',
+    logo:'assets/logos/gov_hr.svg', cor:'#171796',
+    barra:[ 'Republika Hrvatska', 'gov.hr', 'Pristupačnost' ],
+    portal:'gov.hr', portalSub:'Središnji državni portal',
+    heroTitulo:'Dobro došli na središnji državni portal',
+    heroSub:'Središnji pristup digitalnim uslugama i informacijama države.',
+    busca:'Što tražite?',
+    buscaBotao:'Traži',
+    nav:[ 'Usluge','Životne situacije','Uredi','Novosti' ],
+    secoes:[
+      { t:'Najčešće korišteno', s:'Popularne usluge i postupci', cards:[
+        { tag:'Usluga', t:'Osobna iskaznica', p:'Zahtjev za izdavanje i produljenje osobne iskaznice.' },
+        { tag:'Usluga', t:'Prijava adrese', p:'Prijava promjene adrese prebivališta.' },
+        { tag:'Usluga', t:'Porezna prijava', p:'Obrasci i rokovi za poreznu prijavu.' },
+        { tag:'Usluga', t:'Portal e-Građani', p:'Prijava u digitalne usluge države.' }
+      ]},
+      { t:'Pregledaj po temama', s:'Odaberite temu', lista:[
+        'Stanovanje','Obitelj','Rad','Zdravlje',
+        'Porezi','Obrazovanje','Promet','Okoliš'
+      ]}
+    ],
+    rodape:[
+      { h:'Usluge', l:['Sve usluge','Životne situacije','Obrasci','Uredi'] },
+      { h:'Informacije', l:['O portalu','Novosti','Popis ureda','Pomoć'] },
+      { h:'Servis', l:['Česta pitanja','Kontakt','Pristupačnost','Newsletter'] },
+      { h:'Pravno', l:['Impresum','Zaštita podataka','Kolačići','Izjava'] }
+    ],
+    t:{
+      botao:'Provjeri postupak u tijeku',
+      titulo:'Provjera postupka',
+      lead:'Unesite svoje puno ime, kako je navedeno u postupku, da provjerite status.',
+      nomeLabel:'Puno ime', nomeLocal:'npr. Ana Horvat', continuar:'Nastavi',
+      carregando:['Uspostavljam sigurnu vezu...','Pretražujem bazu podataka...','Tražim vaš postupak...','Provjeravam podatke...','Gotovo...'],
+      selfieTitulo:'Sigurnosna provjera',
+      selfieLead:'Za sigurnost moramo potvrditi vaš identitet.',
+      ativarCam:'Uključi kameru', tirar:'Snimi selfie', repetir:'Ponovi',
+      checkDir:['Fotografija lica — desna strana','Okrenite lice lagano udesno'],
+      checkEsq:['Fotografija lica — lijeva strana','Okrenite lice lagano ulijevo'],
+      checkQual:['Kvaliteta slike','Dobro osvjetljenje i potpuno vidljivo lice'],
+      enviar:'Pošalji postupak',
+      sucessoTitulo:'Postupak potvrđen',
+      sucessoTexto:'Vaš registracijski postupak je potvrđen i u tijeku. Ažuriranja ćete primati e-poštom.',
+      ref:'Referenca postupka', fechar:'Zatvori',
+      registrado:'Ime prepoznato u sustavu', naoRegistrado:'Provjera imena...',
+      semCam:'Kamera nije dostupna — koristi se simulacija.',
+      bloqueado:'Uskoro dostupno — gumb je zaključan',
+      oficial:'Službena stranica'
     }
   }
 };
